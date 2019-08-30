@@ -22,7 +22,7 @@ public class A1Novice {
 				total += price * quantity;
 			}
 			
-			System.out.println(name + ": " + total);
+			System.out.println(name + ": " + String.format("%.2f", total));
 			
 		}
 		
