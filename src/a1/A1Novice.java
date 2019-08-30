@@ -17,7 +17,7 @@ public class A1Novice {
 			double total = 0.0;		
 			for (int j = 0; j < numItems; ++j) {	
 				int quantity = scan.nextInt();
-				scan.nextInt();
+				scan.next();
 				double price = scan.nextDouble();
 				total += price * quantity;
 			}
