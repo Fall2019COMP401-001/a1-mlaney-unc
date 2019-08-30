@@ -44,4 +44,52 @@ public class A1Adept {
 		scan.close();
 		
 	}
+	
+	static double min(double[] arr) {
+		
+		double min = arr[0];
+		
+		for (int i = 1; i < arr.length; ++i) {
+			if (arr[i] < min) {
+				min = arr[i];
+			}
+		}
+		
+		return min;
+		
+	}
+	
+	static double max(double[] arr) {
+		
+		double max = arr[0];
+		
+		for (int i = 1; i < arr.length; ++i) {
+			if (arr[i] < max) {
+				max = arr[i];
+			}
+		}
+		
+		return max;
+		
+	}
+	
+	static double sum(double[] arr) {
+		
+		double sum = 0.0;
+		
+		for (int i = 0; i < arr.length; ++i) {
+			sum += arr[i];
+		}
+		
+		return sum;
+	
+	}
+	
+	static double avg(double[] arr) {
+		
+		double sum = sum(arr);
+		return sum / arr.length;
+	
+	}		
+
 }
