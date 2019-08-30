@@ -1,5 +1,6 @@
 package a1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class A1Adept {
@@ -39,8 +40,8 @@ public class A1Adept {
 		}	 
 		
 		
-		System.out.print(custNames);
-		System.out.print(custTotals);
+		System.out.print(Arrays.toString(custNames));
+		System.out.print(Arrays.toString(custTotals));
 		
 		double maxAmount = max(custTotals);
 		//int maxSpenderIndex = java.util.Arrays.asList(custTotals).indexOf(maxAmount);
