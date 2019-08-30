@@ -8,7 +8,40 @@ public class A1Adept {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
+		int numItems = scan.nextInt();
+		String[] itemNames = new String[numItems];
+		double[] itemPrices = new double[numItems];
+		
+		for (int i = 0; i < numItems; ++i) {
+			itemNames[i] = scan.next();
+			itemPrices[i] = scan.nextDouble();
+		}
+		
+		int numCustomers = scan.nextInt();
+		String[] custNames = new String[numCustomers];
+		double[] custTotals = new double[numCustomers];
+		
+		for (int j = 0; j < numCustomers; ++j) {
+			
+			custNames[j] = scan.next() + " " + scan.next();
+			int itemsBought = scan.nextInt();
+			double total = 0.0;
+			
+			for (int k = 0; k < itemsBought; ++k) {
+				int numOfItem = scan.nextInt();
+				String itemName = scan.next();
+				int itemIndex = java.util.Arrays.asList(itemNames).indexOf(itemName);
+				total += numOfItem * itemPrices[itemIndex];
+			}
+			
+			custTotals[j] = total;
+			
+		}	 
+			
+		
+		
+		
+		scan.close();
 		
 	}
 }
