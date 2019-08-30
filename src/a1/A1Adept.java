@@ -40,6 +40,7 @@ public class A1Adept {
 		
 		double maxAmount = max(custTotals);
 		int maxSpenderIndex = java.util.Arrays.asList(custTotals).indexOf(maxAmount);
+		//int maxSpenderIndex = custTotals.indexOf(maxAmount);
 		System.out.println("Biggest: " + custNames[maxSpenderIndex] + " (" + maxAmount + ")");
 		
 		scan.close();
