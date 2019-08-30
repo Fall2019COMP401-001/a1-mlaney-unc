@@ -13,9 +13,9 @@ public class A1Novice {
 			
 			String name = scan.next().charAt(0) + ". " + scan.next();
 			int numItems = scan.nextInt();
-			double total = 0.0;
-					
-			for (int j = 0; j < numItems; ++j) {
+			
+			double total = 0.0;		
+			for (int j = 0; j < numItems; ++j) {	
 				int quantity = scan.nextInt();
 				scan.nextInt();
 				double price = scan.nextDouble();
