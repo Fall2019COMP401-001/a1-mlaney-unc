@@ -12,7 +12,7 @@ public class A1Novice {
 		for (int i = 0; i < numCustomers; ++i) {
 			
 			String name = scan.next().charAt(0) + ". " + scan.next();
-			
+			System.out.print(name);
 			
 		}
 		
