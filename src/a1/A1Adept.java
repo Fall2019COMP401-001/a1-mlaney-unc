@@ -44,12 +44,27 @@ public class A1Adept {
 		//System.out.print(Arrays.toString(custTotals));
 		
 		double maxAmount = max(custTotals);
-		int maxSpenderIndex = Arrays.asList(custTotals).indexOf(maxAmount);
+		int maxSpenderIndex = indexOfArr(custTotals, maxAmount);
 		//int maxSpenderIndex = 0;
 		System.out.println("Biggest: " + custNames[maxSpenderIndex] + " (" + maxAmount + ")");
 		
 		scan.close();
 		
+	}
+	
+	static int indexOfArr(double[] arr, double key) {
+	    
+		int index = -1;
+		
+	    for (int i = 0; i < arr.length; ++i) {
+	        if (key == arr[i]) {
+	            index = i;
+	            break;
+	        }
+	    }
+	    
+	    return index;
+	    
 	}
 	
 	static double min(double[] arr) {
