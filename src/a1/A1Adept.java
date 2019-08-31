@@ -52,7 +52,7 @@ public class A1Adept {
 		System.out.println("Smallest: " + custNames[minSpenderIndex] + " (" + minAmount + ")");
 		
 		double average = avg(custTotals);
-		System.out.println("Average: " + average);
+		System.out.println("Average: " + String.format("%.2f", average));
 		
 		scan.close();
 		
@@ -92,7 +92,7 @@ public class A1Adept {
 		double max = arr[0];
 		
 		for (int i = 1; i < arr.length; ++i) {
-			if (arr[i] < max) {
+			if (arr[i] > max) {
 				max = arr[i];
 			}
 		}
