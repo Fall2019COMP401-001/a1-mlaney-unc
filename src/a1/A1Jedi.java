@@ -25,40 +25,38 @@ public class A1Jedi {
 		String[] custNames = new String[numCustomers];
 		double[] custTotals = new double[numCustomers];
 		
-		//
 		for (int j = 0; j < numCustomers; ++j) {
+			
+			boolean[] visited = new boolean[numItems];
+			for (int i = 0; i < numItems; ++i) {
+				visited[i] = false;
+			}
 			
 			custNames[j] = scan.next() + " " + scan.next();
 			int itemsBought = scan.nextInt();
-			//double total = 0.0;
 			
 			for (int k = 0; k < itemsBought; ++k) {
-				
 				int numOfItem = scan.nextInt();
 				String itemName = scan.next();
 				int itemIndex = java.util.Arrays.asList(itemNames).indexOf(itemName);
 				totalBought[itemIndex] += numOfItem;
-				custPerItem[itemIndex] += 1;
-				
-				//total += numOfItem * itemPrices[itemIndex];
-			
+				if (!visited[itemIndex]) {
+					custPerItem[itemIndex] += 1;
+					visited[itemIndex] = true;
+				}
 			}
 			
-			//custTotals[j] = total;
-			
 		}
-		//
 		
 		for (int i = 0; i < numItems; ++i) {
 			
 			if (custPerItem[i] == 0) {
-				System.out.println("No customers bought " + totalBought[i] + " " + itemNames[i]);
+				System.out.println("No customers bought " + itemNames[i]);
 			} else {
 				System.out.println(custPerItem[i] + " customers bought " + totalBought[i] + " " + itemNames[i]);
 			}
 			
 		}		
-		
 		
 	}
 	
