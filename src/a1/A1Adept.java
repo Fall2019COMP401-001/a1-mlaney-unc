@@ -45,11 +45,11 @@ public class A1Adept {
 		
 		double maxAmount = max(custTotals);
 		int maxSpenderIndex = indexOfArr(custTotals, maxAmount);
-		System.out.println("Biggest: " + custNames[maxSpenderIndex] + " (" + maxAmount + ")");
+		System.out.println("Biggest: " + custNames[maxSpenderIndex] + " (" + String.format("%.2f", maxAmount) + ")");
 		
 		double minAmount = min(custTotals);
 		int minSpenderIndex = indexOfArr(custTotals, minAmount);
-		System.out.println("Smallest: " + custNames[minSpenderIndex] + " (" + minAmount + ")");
+		System.out.println("Smallest: " + custNames[minSpenderIndex] + " (" + String.format("%.2f", minAmount) + ")");
 		
 		double average = avg(custTotals);
 		System.out.println("Average: " + String.format("%.2f", average));
